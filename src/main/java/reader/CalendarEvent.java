@@ -69,7 +69,7 @@ public class CalendarEvent {
 	}
 
 	/**
-	 * Gets the {@link Date} instance representing the event end time.
+	 * Sets the {@link Date} instance representing the event end time.
 	 */
 	public void setEndTime(Date endTime) {
 		this.endTime = endTime;

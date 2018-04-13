@@ -32,46 +32,98 @@ public class CalendarSettings {
 	//number of lines before records, that are not important for the calendar
 	private int titleLinesNumber;
 	
+
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getTitleLinesNumber() {
 		return titleLinesNumber;
 	}
 
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setTitleLinesNumber(int titleLinesNumber) {
 		this.titleLinesNumber = titleLinesNumber;
 	}
-
+	
+	/**
+	 * Gets the {@link Integer} value representing the time zone
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the time zone
+	 * in the settings file.
+	 */
 	public String getTimeZone() {
 		return timeZone;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the time zone
+	 * in the settings file.
+	 */
 	public void setTimeZone(String timeZone) {
 		this.timeZone = timeZone;
 	}
 
+	/**
+	 * Gets the {@link Integer} value representing the time format
+	 * @return titleLinesNumber The {@link Integer} value representing the time format
+	 */
 	public String getTimeFormat() {
 		return timeFormat;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the time format
+	 * in the settings file.
+	 */
 	public void setTimeFormat(String timeFormat) {
 		this.timeFormat = timeFormat;
 	}
 
+	/**
+	 * Gets the {@link Integer} value representing the date format
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the date format
+	 * in the settings file.
+	 */
 	public String getDateFormat() {
 		return dateFormat;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the date format
+	 * in the settings file.
+	 */
 	public void setDateFormat(String dateFormat) {
 		this.dateFormat = dateFormat;
 	}
 
+	/**
+	 * Gets the {@link String} value representing the reminder type
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the reminder type
+	 */
 	public String getReminderType() {
 		return reminderType;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the reminder type
+	 * in the settings file.
+	 */
 	public void setReminderType(String reminderType) {
 		this.reminderType = reminderType;
 	}
 
+	/**
+	 * Returns weather or not the {@link Date} is a working day
+	 */
 	public Boolean workingDate(Date d) {
 		if(nonWorkingDates == null)
 			return true;
@@ -83,10 +135,20 @@ public class CalendarSettings {
 		return true;
 	}
 	
+	/**
+	 * Gets the {@link Date} value representing the end date of the calendar
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public Date getCalendarEndDate() {
 		return calendarEndDate;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the end date of the calendar
+	 * in the settings file.
+	 */
 	public void setCalendarEndDate(Date calendarEndDate) {
 		this.calendarEndDate = calendarEndDate;
 	}
@@ -113,34 +175,74 @@ public class CalendarSettings {
 	private int[] summaryIndexes;
 	private int counter;
 	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int[] getDescriptionIndexes() {
 		return descriptionIndexes;
 	}
 
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getCounter() {
 		return counter;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setCounter(int counter) {
 		this.counter = counter;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setDescriptionIndexes(int[] descriptionIndexes) {
 		this.descriptionIndexes = descriptionIndexes;
 	}
 
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int[] getSummaryIndexes() {
 		return summaryIndexes;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setSummaryIndexes(int[] summaryIndexes) {
 		this.summaryIndexes = summaryIndexes;
 	}
 
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return titleLinesNumber The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public String getStartEndTimeSep() {
 		return startEndTimeSep;
 	}
 
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setStartEndTimeSep(String startEndTimeSep) {
 		this.startEndTimeSep = startEndTimeSep;
 	}
@@ -153,7 +255,11 @@ public class CalendarSettings {
 	private String[] filters;
 	private int locationIndex;
 	
-	
+	/**
+	 * Creates a {@link CalendarSettings} object, with the date that is parsed from the
+	 * settings.txt file
+	 
+	 */
 	public CalendarSettings(String fileExtension, String lineDelimitter, String wordDelimitter, Boolean titleLine,
 			Boolean stringQuotes, Date calendarStartDate, Date calendarEndDate, Date[] nonWorkingDates, Boolean workingSaturdays,
 			Boolean workingSundays, int dayIndex, String[] daysShortExpressions, int startDateIndex, int endDateIndex,
@@ -195,118 +301,345 @@ public class CalendarSettings {
 		
 	}
 	
+	/**
+	 * Gets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 * @return fileExtension The {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public String getFileExtension() {
 		return fileExtension;
 	}
+	
+	/**
+	 * Sets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setFileExtension(String fileExtension) {
 		this.fileExtension = fileExtension;
 	}
+	
+	/**
+	 * Gets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 * @return lineDelimitter The {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public String getLineDelimitter() {
 		return lineDelimitter;
 	}
+	
+	/**
+	 * Sets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setLineDelimitter(String lineDelimitter) {
 		this.lineDelimitter = lineDelimitter;
 	}
+	
+	/**
+	 * Gets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 * @return wordDelimitter The {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public String getWordDelimitter() {
 		return wordDelimitter;
 	}
+	
+	/**
+	 * Sets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setWordDelimitter(String wordDelimitter) {
 		this.wordDelimitter = wordDelimitter;
 	}
+	
+	/**
+	 * Gets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 * @return titleLine The {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public Boolean getTitleLine() {
 		return titleLine;
 	}
+	
+	/**
+	 * Sets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setTitleLine(Boolean titleLine) {
 		this.titleLine = titleLine;
 	}
+	
+	/**
+	 * Gets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 * @return stringQuotes The {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public Boolean getStringQuotes() {
 		return stringQuotes;
 	}
+	
+	/**
+	 * Sets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setStringQuotes(Boolean stringQuotes) {
 		this.stringQuotes = stringQuotes;
 	}
+	
+	/**
+	 * Gets the {@link Date} value representing the number of the title lines
+	 * in the settings file.
+	 * @return calendarStartDate The {@link Date} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public Date getCalendarStartDate() {
 		return calendarStartDate;
 	}
+	
+	/**
+	 * Sets the {@link Date} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setCalendarStartDate(Date calendarStartDate) {
 		this.calendarStartDate = calendarStartDate;
 	}
+	
+	/**
+	 * Gets the  value representing the number of the title lines
+	 * in the settings file.
+	 * @return nonWorkingDates The  value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public Date[] getNonWorkingDates() {
 		return nonWorkingDates;
 	}
+	
+	/**
+	 * Sets the value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setNonWorkingDates(Date[] nonWorkingDates) {
 		this.nonWorkingDates = nonWorkingDates;
 	}
+	
+	/**
+	 * Gets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 * @return workingSaturdays The {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public Boolean getWorkingSaturdays() {
 		return workingSaturdays;
 	}
+	
+	/**
+	 * Sets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setWorkingSaturdays(Boolean workingSaturdays) {
 		this.workingSaturdays = workingSaturdays;
 	}
+	
+	/**
+	 * Gets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 * @return workingSundays The {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public Boolean getWorkingSundays() {
 		return workingSundays;
 	}
+	
+	/**
+	 * Sets the {@link Boolean} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setWorkingSundays(Boolean workingSundays) {
 		this.workingSundays = workingSundays;
 	}
+	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return dayIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getDayIndex() {
 		return dayIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setDayIndex(int dayIndex) {
 		this.dayIndex = dayIndex;
 	}
+	
+	/**
+	 * Gets the value representing the number of the title lines
+	 * in the settings file.
+	 * @return daysShorExpressions The value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public String[] getDaysShortExpressions() {
 		return daysShortExpressions;
 	}
+	
+	/**
+	 * Sets the value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setDaysShortExpressions(String[] daysShortExpressions) {
 		this.daysShortExpressions = daysShortExpressions;
 	}
+	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return startDateIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getStartDateIndex() {
 		return startDateIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setStartDateIndex(int startDateIndex) {
 		this.startDateIndex = startDateIndex;
 	}
+	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return endDateIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getEndDateIndex() {
 		return endDateIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setEndDateIndex(int endDateIndex) {
 		this.endDateIndex = endDateIndex;
 	}
+	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return eventStartTimeIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getEventStartTimeIndex() {
 		return eventStartTimeIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setEventStartTimeIndex(int eventStartTimeIndex) {
 		this.eventStartTimeIndex = eventStartTimeIndex;
 	}
+	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return eventEndTimeIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
+	
 	public int getEventEndTimeIndex() {
 		return eventEndTimeIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setEventEndTimeIndex(int eventEndTimeIndex) {
 		this.eventEndTimeIndex = eventEndTimeIndex;
 	}
+	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return eventDurationIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getEventDurationIndex() {
 		return eventDurationIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setEventDurationIndex(int eventDurationIndex) {
 		this.eventDurationIndex = eventDurationIndex;
 	}
+	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return filterIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getFilterIndex() {
 		return filterIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setFilterIndex(int filterIndexes) {
 		this.filterIndex = filterIndex;
 	}
+	
+	/**
+	 * Gets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 * @return filters The {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public String[] getFilters() {
 		return filters;
 	}
+	
+	/**
+	 * Sets the {@link String} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setFilters(String[] filters) {
 		this.filters = filters;
 	}
 	
+	/**
+	 * Gets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 * @return locationIndex The {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public int getLocationIndex() {
 		return locationIndex;
 	}
+	
+	/**
+	 * Sets the {@link Integer} value representing the number of the title lines
+	 * in the settings file.
+	 */
 	public void setLocationIndex(int locationIndex) {
 		this.locationIndex = locationIndex;
 	}

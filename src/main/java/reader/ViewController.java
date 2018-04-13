@@ -7,8 +7,12 @@ import javax.swing.filechooser.FileSystemView;
 
 public class ViewController {
 
+	 /** A public instance of the ViewController
+    */
 	public static ViewController instance = null;
 	
+	 /** Returns the ViewController instance
+    */
 	public static ViewController getInstance() {
       if(instance == null) {
          instance = new ViewController();
@@ -19,7 +23,10 @@ public class ViewController {
 	protected ViewController() {
 		
 	}
-	   
+	
+	 /** Opens the file chooser, so the file containing the events could be read.
+	  * @return selectedFile The selected file, containing the events, or null
+    */
 	public File OpenFileChooser() {
 		JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 
